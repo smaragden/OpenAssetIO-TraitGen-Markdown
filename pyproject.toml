@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "openassetio-traitgen-markdown"
+version = "0.1.0"
+description = ""
+authors = ["Fredrik Brännbacka <fredrik.brannbacka@ilpvfx.com>"]
+readme = "README.md"
+packages = [
+    { include = "openassetio_traitgen_markdown", from = "." }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+openassetio-traitgen = {path = "../OpenAssetIO-TraitGen/", develop = true}
+mdutils = "^1.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins."openassetio-traitgen.generators"]
+markdown = 'openassetio_traitgen_markdown:MarkdownTraitGenerator'

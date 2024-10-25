@@ -1,0 +1,1 @@
+# OpenAssetIO TraitGen Markdown
